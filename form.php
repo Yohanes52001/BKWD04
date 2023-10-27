@@ -3,7 +3,7 @@ $isi = '';
 $tgl_awal = '';
 $tgl_akhir = '';
 if (isset($_GET['id'])) {
-    $ambil = mysqli_query($mysqli, "SELECT * FROM kegiatan 
+    $ambil = mysqli_query($mysqli, "SELECT * FROM poliklinik 
     WHERE id='" . $_GET['id'] . "'");
     while ($row = mysqli_fetch_array($ambil)) {
         $isi = $row['isi'];

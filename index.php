@@ -37,10 +37,21 @@
                             <a class="nav-link" aria-current="page" herf="index.php">
                                 Home
                             </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                                Data Master
+                            </a>
                             <ul class="dropdow-menu">
                                 <li>
+                                    <a class="dropdown-item" herf="index.php?page=dokter">
+                                        Dokter
+                                    </a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" herf="index.php?page=pasien">
-                                        pasien
+                                        Pasien
                                     </a>
                                 </li>
                             </ul>
