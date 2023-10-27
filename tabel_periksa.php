@@ -27,9 +27,9 @@
                     <a class="btn btn-success rounded-pill px-3"
                     href="index.php?page=periksa&id=<?php echo $data['id'] ?>&aksi=hapus">Hapus</a>
                 </td>
-                </tr>
+            </tr>
         <?php
         }
         ?>
     </select>
-</div>
+</div>       
