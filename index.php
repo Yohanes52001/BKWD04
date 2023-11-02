@@ -17,9 +17,32 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
         crossorigin="anonymous"> 
 
-        <title>Poliklinik</title>
+        <title>Poliklinik</title>    <!--Judul Halaman-->
     </head>
     <body>
+    <h3>
+        Poliklinik
+    </h3>
+    <!--Form Input Data-->
+    <form class="form row" method="POST" action="" name="myForm" onsubmit="return(validate());">
+    <!-- Kode php untuk menghubungkan form dengan database -->
+        <?php
+            $isi = '';
+            $tgl_awal = '';
+            $tgl_akhir = '';
+            if (isset($_GET['id'])) {
+                $ambil = mysqli_query($mysqli, "SELECT * FROM poliklinik 
+                WHERE id='" . $_GET['id'] . "'");
+                while ($row = mysqli_fetch_array($ambil)) {
+                    $isi = $row['isi'];
+                    $tgl_awal = $row['tgl_awal'];
+                    $tgl_akhir = $row['tgl_akhir'];
+            }
+        ?>
+            <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+        <?php
+        }
+        ?>
         <nav class="navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
